@@ -1,0 +1,8 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/quickstart-image', '.' ]
+serviceAccount: 'projects/fortesting-375821/serviceAccounts/cloudbuildtest@fortesting-375821.iam.gserviceaccount.com'
+options:
+  logging: NONE
+images:
+- 'gcr.io/$PROJECT_ID/quickstart-image'
